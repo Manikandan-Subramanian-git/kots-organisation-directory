@@ -169,3 +169,4 @@ export class HeaderComponent {
   readonly store = inject(OrganisationStore);
   readonly openCreateModal = output<void>();
 }
+

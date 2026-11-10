@@ -209,7 +209,7 @@ import { Organisation } from '../../core/models/organisation.model';
                       }
 
                       @if (org.hasStatusTypo) {
-                        <span class="typo-pill" [title]="'status.typoNote' | t:{ raw: org.rawStatus }">
+                        <span class="typo-pill" [title]="'status.typoNote' | t:{ raw: org.rawStatus ?? '' }">
                           typo
                         </span>
                       }
@@ -223,7 +223,7 @@ import { Organisation } from '../../core/models/organisation.model';
                       @if (org.hasDirtyMemberCount) {
                         <span
                           class="quirk-icon"
-                          [title]="'dataQuirks.dirtyMemberCount' | t:{ raw: org.rawMemberCount }"
+                          [title]="'dataQuirks.dirtyMemberCount' | t:{ raw: org.rawMemberCount ?? '' }"
                         >
                           ⚠️
                         </span>
@@ -239,7 +239,7 @@ import { Organisation } from '../../core/models/organisation.model';
                       } @else if (!org.isOwnerEmailValid) {
                         <span
                           class="invalid-email-text"
-                          [title]="'dataQuirks.dirtyEmail' | t:{ raw: org.rawOwnerEmail }"
+                          [title]="'dataQuirks.dirtyEmail' | t:{ raw: org.rawOwnerEmail ?? '' }"
                         >
                           {{ org.ownerEmail }} ⚠️
                         </span>
@@ -261,7 +261,7 @@ import { Organisation } from '../../core/models/organisation.model';
                       @if (org.isCreatedAtInvalid) {
                         <span
                           class="invalid-date-text"
-                          [title]="'dataQuirks.dirtyDate' | t:{ raw: org.rawCreatedAt }"
+                          [title]="'dataQuirks.dirtyDate' | t:{ raw: org.rawCreatedAt ?? '' }"
                         >
                           {{ 'table.invalidDate' | t }}
                         </span>
@@ -671,3 +671,4 @@ export class OrgTableComponent {
     return `Status: ${org.status}`;
   }
 }
+

@@ -64,3 +64,4 @@ export interface Organisation {
   /** True if name length exceeds reasonable display bounds (> 60 chars) */
   isLongName: boolean;
 }
+

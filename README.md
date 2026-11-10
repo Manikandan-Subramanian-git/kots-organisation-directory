@@ -110,3 +110,4 @@ For the assessment submission video, follow this exact structure:
    * Show `OrganisationAdapter`. Highlight how dirty data (duplicate ID 42, missing names, typo `'actve'`, string member count `"12"`, negative counts, missing owners, and unparseable dates) is safely normalized into typed domain entities with audit badges and safe fallbacks.
 4. **[3:30 - 4:30] One Thing You Would Do Differently With Two More Days**:
    * Detail Virtual Scrolling (`@angular/cdk/scrolling`) for 10,000+ records, IndexedDB offline caching, and automated Playwright E2E testing for rate limit backoffs.
+

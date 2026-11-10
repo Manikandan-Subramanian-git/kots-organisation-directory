@@ -1,6 +1,6 @@
 import { Injectable, signal } from '@angular/core';
 
-export type TranslationParams = Record<string, string | number>;
+export type TranslationParams = Record<string, string | number | null | undefined>;
 
 const DEFAULT_EN_TRANSLATIONS: Record<string, unknown> = {
   app: {
@@ -163,7 +163,8 @@ export class TranslationService {
     }
 
     return Object.entries(params).reduce((str, [k, v]) => {
-      return str.replace(new RegExp(`\\{${k}\\}`, 'g'), String(v));
+      const valStr = v != null ? String(v) : '';
+      return str.replace(new RegExp(`\\{${k}\\}`, 'g'), valStr);
     }, current);
   }
 }

@@ -150,3 +150,4 @@ export class AppComponent implements OnInit {
     }, 4500);
   }
 }
+

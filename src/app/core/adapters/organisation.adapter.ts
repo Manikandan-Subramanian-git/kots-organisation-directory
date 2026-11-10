@@ -145,3 +145,4 @@ export class OrganisationAdapter {
     return rawList.map((item, idx) => OrganisationAdapter.fromRaw(item, idx, fallbackUnnamed));
   }
 }
+

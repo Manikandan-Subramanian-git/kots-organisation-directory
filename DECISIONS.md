@@ -99,3 +99,4 @@ The fixture intentionally mirrors messy production data with 8 distinct classes 
    Add Playwright tests verifying the 5 req/min rate-limit queue backoff, URL query parameter bookmarking, and screen-reader accessibility announcements.
 4. **Inline Cell Editing with Optimistic Updates**:
    Allow Ops users to edit status and owner directly in the table with inline validation and automatic backend rollback on failure.
+

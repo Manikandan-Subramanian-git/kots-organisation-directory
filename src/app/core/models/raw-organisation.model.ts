@@ -12,3 +12,4 @@ export interface RawOrganisation {
   } | null;
   createdAt?: string | number | null;
 }
+

@@ -351,3 +351,4 @@ export class SearchFilterComponent implements OnInit, OnDestroy {
     return !!this.store.searchQuery() || this.store.statusFilter() !== 'all';
   }
 }
+

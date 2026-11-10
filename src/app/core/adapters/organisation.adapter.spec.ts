@@ -80,3 +80,4 @@ describe('OrganisationAdapter', () => {
     expect(parsedDup1.clientUid).not.toBe(parsedDup2.clientUid);
   });
 });
+
