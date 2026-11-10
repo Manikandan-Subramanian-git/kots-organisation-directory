@@ -1,0 +1,104 @@
+{
+  "app": {
+    "title": "Organisation Directory",
+    "subtitle": "KOTS Operations Portal",
+    "badgeOps": "Ops Live",
+    "densityToggle": "Toggle Compact View",
+    "densityCompact": "Compact",
+    "densityNormal": "Comfortable",
+    "addOrgButton": "+ Add Organisation"
+  },
+  "searchFilter": {
+    "searchPlaceholder": "Search by organisation name...",
+    "searchAria": "Search organisations by name",
+    "clearSearchAria": "Clear search text",
+    "filterStatusAria": "Filter organisations by status",
+    "statusAll": "All Statuses",
+    "statusActive": "Active",
+    "statusInactive": "Inactive",
+    "statusSuspended": "Suspended",
+    "statusUnknown": "Needs Review",
+    "resetFilters": "Reset Filters",
+    "activeFiltersCount": "{count} filter active",
+    "activeFiltersCountPlural": "{count} filters active"
+  },
+  "table": {
+    "caption": "List of organisations with status, membership, owner, and registration date",
+    "colName": "Organisation Name",
+    "colStatus": "Status",
+    "colMembers": "Members",
+    "colOwner": "Owner",
+    "colCreated": "Created Date",
+    "unnamedOrg": "(Unnamed Organisation)",
+    "unassignedOwner": "Unassigned",
+    "invalidDate": "Invalid Date",
+    "sortAscAria": "Sort ascending by {col}",
+    "sortDescAria": "Sort descending by {col}",
+    "sortedAsc": "Sorted ascending",
+    "sortedDesc": "Sorted descending"
+  },
+  "status": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "suspended": "Suspended",
+    "unknown": "Needs Review",
+    "typoNote": "Backend typo detected in status ('{raw}')",
+    "activeAria": "Status: Active",
+    "inactiveAria": "Status: Inactive",
+    "suspendedAria": "Status: Suspended",
+    "unknownAria": "Status: Needs Review (Invalid status in API)"
+  },
+  "dataQuirks": {
+    "dirtyMemberCount": "Invalid member count from backend: {raw}. Normalized to 0.",
+    "dirtyEmail": "Malformed email address from API: {raw}",
+    "dirtyDate": "Unparseable date value: {raw}",
+    "duplicateId": "Duplicate ID from API (ID: {id})",
+    "emptyName": "Missing name in upstream record"
+  },
+  "states": {
+    "loadingTitle": "Loading organisations...",
+    "loadingDescription": "Fetching the organisation registry from the ops API...",
+    "emptyTitle": "No organisations found",
+    "emptyDescription": "No organisations match your current search and filter criteria.",
+    "emptyReset": "Clear all filters",
+    "errorTitle": "Unable to load organisations",
+    "errorDescription": "The ops service encountered a temporary error (~15% simulated failure or network interruption).",
+    "retryButton": "Retry Request"
+  },
+  "streaming": {
+    "loadingProgress": "Displaying {loaded} of {total} organisations",
+    "streamingNotice": "Streaming remaining records in background respecting 5 req/min rate limit...",
+    "rateLimitNotice": "API rate limit reached (5 req/min). Waiting for cooldown window...",
+    "allLoaded": "All {total} organisations loaded into memory."
+  },
+  "createModal": {
+    "dialogTitle": "Add New Organisation",
+    "dialogDescription": "Create a new organisation in the ops registry. All fields marked with * are required.",
+    "closeAria": "Close dialog",
+    "fieldName": "Organisation Name",
+    "fieldNamePlaceholder": "e.g., Acme Corporation",
+    "fieldStatus": "Initial Status",
+    "fieldStatusSelect": "Select status...",
+    "fieldOwnerEmail": "Owner Email Address",
+    "fieldOwnerEmailPlaceholder": "e.g., ops@acme.example",
+    "fieldMemberCount": "Initial Member Count",
+    "fieldMemberCountPlaceholder": "0 (Optional)",
+    "memberCountHelp": "Optional. Must be an integer greater than or equal to 0.",
+    "submitButton": "Create Organisation",
+    "submittingButton": "Creating...",
+    "cancelButton": "Cancel",
+    "successNotification": "Organisation \"{name}\" was successfully created!",
+    "failureNotification": "Failed to create organisation. Please resolve the errors below.",
+    "errors": {
+      "nameRequired": "Organisation name is required.",
+      "nameMinLength": "Organisation name must be at least 3 characters.",
+      "nameMaxLength": "Organisation name cannot exceed 80 characters.",
+      "nameUnique": "An organisation with this name already exists (names must be unique).",
+      "statusRequired": "Please select a valid status.",
+      "ownerEmailRequired": "Owner email address is required.",
+      "ownerEmailInvalid": "Please enter a valid email address (e.g. name@domain.com).",
+      "memberCountMin": "Member count cannot be negative.",
+      "memberCountPattern": "Member count must be a whole number."
+    }
+  }
+}
